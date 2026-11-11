@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>My Home Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* My Home brand palette — warm terracotta + cream */
+    --color-bg: #FBF5EE;
+    --color-surface: #FFFFFF;
+    --color-surface-alt: #F3E9DC;
+    --color-text: #2C2216;
+    --color-text-muted: #6B5D4C;
+    --color-accent: #C47B5C;
+    --color-accent-dark: #A6603F;
+    --color-border: #E7D9C6;
+    --color-warning-bg: #F7E3D1;
+    --color-warning-text: #7A4A1E;
+
+    --font-display: 'Fraunces', 'Iowan Old Style', Georgia, serif;
+    --font-body: 'Karla', 'Segoe UI', system-ui, sans-serif;
+
+    color-scheme: light;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --color-bg: #1C1612;
+      --color-surface: #241B15;
+      --color-surface-alt: #2A2018;
+      --color-text: #F0E6DA;
+      --color-text-muted: #C2AF9B;
+      --color-accent: #E09972;
+      --color-accent-dark: #F0B18E;
+      --color-border: #3A2D22;
+      --color-warning-bg: #3A2A1A;
+      --color-warning-text: #F0C79A;
+      color-scheme: dark;
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --color-bg: #1C1612;
+    --color-surface: #241B15;
+    --color-surface-alt: #2A2018;
+    --color-text: #F0E6DA;
+    --color-text-muted: #C2AF9B;
+    --color-accent: #E09972;
+    --color-accent-dark: #F0B18E;
+    --color-border: #3A2D22;
+    --color-warning-bg: #3A2A1A;
+    --color-warning-text: #F0C79A;
+    color-scheme: dark;
+  }
+
+  * { box-sizing: border-box; }
+
+  html, body {
+    margin: 0;
+    background: var(--color-bg);
+    color: var(--color-text);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.65;
+  }
+
+  a { color: var(--color-accent-dark); text-decoration: underline; text-decoration-color: var(--color-border); text-underline-offset: 2px; }
+  a:hover { color: var(--color-accent); }
+
+  .shell {
+    display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  nav.toc {
+    flex: 0 0 260px;
+    padding: 48px 24px 48px 32px;
+    position: sticky;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow-y: auto;
+  }
+
+  .brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 28px;
+  }
+
+  .brand-mark {
+    width: 34px;
+    height: 34px;
+    border-radius: 9px;
+    background: var(--color-accent);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .brand-mark svg { width: 18px; height: 18px; }
+
+  .brand-name {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.05rem;
+    color: var(--color-text);
+  }
+
+  nav.toc ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-left: 2px solid var(--color-border);
+  }
+
+  nav.toc li { margin: 0; }
+
+  nav.toc a {
+    display: block;
+    padding: 7px 0 7px 16px;
+    margin-left: -2px;
+    border-left: 2px solid transparent;
+    font-size: 0.86rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    line-height: 1.4;
+  }
+
+  nav.toc a:hover {
+    color: var(--color-accent-dark);
+    border-left-color: var(--color-accent);
+  }
+
+  main {
+    flex: 1 1 auto;
+    min-width: 0;
+    padding: 56px 40px 100px;
+  }
+
+  .doc-header { max-width: 680px; margin-bottom: 44px; }
+
+  .kicker {
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-accent-dark);
+    font-weight: 700;
+    margin: 0 0 14px;
+  }
+
+  h1 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: clamp(2rem, 4vw, 2.6rem);
+    line-height: 1.15;
+    margin: 0 0 14px;
+    text-wrap: balance;
+  }
+
+  .updated {
+    font-size: 0.92rem;
+    color: var(--color-text-muted);
+    margin: 0;
+  }
+
+  .lede {
+    max-width: 680px;
+    font-size: 1.08rem;
+    color: var(--color-text-muted);
+    margin: 18px 0 0;
+  }
+
+  .fact-row {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    max-width: 680px;
+    margin: 24px 0 0;
+  }
+
+  .fact-chip {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: 999px;
+    padding: 7px 14px;
+    font-size: 0.82rem;
+    color: var(--color-text-muted);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .fact-chip strong { color: var(--color-text); font-weight: 700; }
+
+  article {
+    max-width: 680px;
+  }
+
+  section { margin: 0 0 44px; }
+  section:last-of-type { margin-bottom: 0; }
+
+  h2 {
+    font-family: var(--font-display);
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin: 0 0 6px;
+    padding-top: 6px;
+    text-wrap: balance;
+  }
+
+  .section-num {
+    font-size: 0.78rem;
+    color: var(--color-accent-dark);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    display: block;
+    margin-bottom: 4px;
+  }
+
+  h3 {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 1.02rem;
+    margin: 24px 0 8px;
+  }
+
+  p { margin: 0 0 14px; }
+  ul, ol { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  li:last-child { margin-bottom: 0; }
+
+  strong { font-weight: 700; }
+
+  .callout {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-left: 4px solid var(--color-accent);
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+  }
+
+  .callout.warning {
+    background: var(--color-warning-bg);
+    border-left-color: var(--color-warning-text);
+    color: var(--color-warning-text);
+  }
+
+  .callout p:last-child { margin-bottom: 0; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 4px 0 18px;
+    font-size: 0.9rem;
+  }
+
+  th, td {
+    text-align: left;
+    padding: 9px 12px;
+    border-bottom: 1px solid var(--color-border);
+    vertical-align: top;
+  }
+
+  th {
+    font-size: 0.76rem;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-text-muted);
+    font-weight: 700;
+  }
+
+  code {
+    font-family: ui-monospace, 'SF Mono', Consolas, monospace;
+    font-size: 0.88em;
+    background: var(--color-surface-alt);
+    padding: 1px 5px;
+    border-radius: 4px;
+  }
+
+  footer {
+    max-width: 680px;
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+  }
+
+  .mobile-toc {
+    display: none;
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    background: var(--color-bg);
+    border-bottom: 1px solid var(--color-border);
+    padding: 12px 20px;
+  }
+
+  .mobile-toc summary {
+    font-family: var(--font-body);
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+
+  .mobile-toc summary::-webkit-details-marker { display: none; }
+
+  .mobile-toc[open] ol {
+    list-style: none;
+    margin: 12px 0 4px;
+    padding: 0;
+  }
+
+  .mobile-toc a {
+    display: block;
+    padding: 8px 2px;
+    font-size: 0.88rem;
+    color: var(--color-text-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  @media (max-width: 900px) {
+    nav.toc { display: none; }
+    .mobile-toc { display: block; }
+    main { padding: 0 20px 72px; }
+    .doc-header { padding-top: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="mobile-toc">
+  <details>
+    <summary>
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      Jump to a section
+    </summary>
+    <ol id="mobile-toc-list"></ol>
+  </details>
+</div>
+
+<div class="shell">
+  <nav class="toc">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 11.5 12 4l9 7.5"/><path d="M5.5 10v9a1 1 0 0 0 1 1H9a1 1 0 0 0 1-1v-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v4a1 1 0 0 0 1 1h2.5a1 1 0 0 0 1-1v-9"/></svg>
+      </div>
+      <span class="brand-name">My Home</span>
+    </div>
+    <ol id="toc-list"></ol>
+  </nav>
+
+  <main>
+    <div class="doc-header">
+      <p class="kicker">Privacy &amp; Data Deletion</p>
+      <h1>My Home Privacy Policy</h1>
+      <p class="updated">Last updated: November 2, 2026 &middot; Covers My Home for Android (and iOS, where available)</p>
+      <p class="lede">My Home is a family organizer app: a shared calendar, shopping lists, chores, a family tree, chat, and games. This page explains, in plain language, what information the app handles, where it lives, and how to delete it.</p>
+
+      <div class="fact-row">
+        <span class="fact-chip">🏠 <strong>One app</strong>, shared with your family</span>
+        <span class="fact-chip">📺 Shows ads <strong>by default</strong></span>
+        <span class="fact-chip">💳 <strong>Remove Ads</strong> available as a one-time purchase</span>
+      </div>
+    </div>
+
+    <article>
+
+      <section id="short-version">
+        <span class="section-num">01</span>
+        <h2>The short version</h2>
+        <p>My Home connects your family's calendar, shopping lists, chores, and more across everyone's devices. Here's what matters most:</p>
+        <ul>
+          <li><strong>Your family's data is not stored on any server we run.</strong> Instead, your family connects the app to its own, separate backend project hosted by Supabase (a third-party database provider) that one family member sets up. We don't operate that project, can't log into it, and have no access to what your family stores there.</li>
+          <li><strong>Ads are shown by default.</strong> You can remove them permanently with a one-time "Remove Ads" purchase, processed by Google Play.</li>
+          <li><strong>Before you create or join a family,</strong> the app briefly stores just your name and date of birth locally on your device — nothing is sent anywhere until you connect to (or start) a family.</li>
+        </ul>
+        <div class="callout">
+          <p>We (the people who build My Home) do not run a central server that collects data from every family using the app. Each family's data lives in its own, separate database that only that family controls.</p>
+        </div>
+      </section>
+
+      <section id="who-we-are">
+        <span class="section-num">02</span>
+        <h2>Who this policy covers</h2>
+        <p>This policy covers My Home, published by <strong>Mihael Šarko</strong> ("we", "us", "the developer").</p>
+      </section>
+
+      <section id="what-we-collect">
+        <span class="section-num">03</span>
+        <h2>Information the app handles</h2>
+        <p>Once you create or join a family, the following kinds of information may be stored in <strong>your family's own Supabase project</strong> — not on a server we control:</p>
+
+        <h3>Account information</h3>
+        <ul>
+          <li>Email address and password (password is handled entirely by Supabase's authentication system; the app and its developer never see or store it in plain text)</li>
+          <li>First name, last name</li>
+          <li>Date of birth (required at setup — used to show birthday reminders in the family calendar)</li>
+        </ul>
+
+        <h3>Content your family creates</h3>
+        <ul>
+          <li>Calendar events, shopping lists and items, and chores/tasks (including who they're assigned to)</li>
+          <li>Family tree entries: names, birth dates, gender, and notes for family members you add</li>
+          <li>Chat messages — both group and one-to-one — between members of your family</li>
+          <li>Polls and votes, recipes, pantry items, and school schedules you choose to enter</li>
+          <li>Photos you upload to your family's shared album or recipes</li>
+          <li>Multiplayer game invitations and in-progress game state (for the games tab)</li>
+        </ul>
+
+        <h3>What we don't collect</h3>
+        <p>We don't run analytics or crash-reporting that sends your usage data to us. We don't see your family's calendar, chores, messages, or photos — they live only in your family's own Supabase project.</p>
+      </section>
+
+      <section id="local-edition">
+        <span class="section-num">04</span>
+        <h2>Before you connect to a family</h2>
+        <p>The first time you open the app, before you've created or joined a family, it works locally: it asks for your first name, last name, and date of birth (all required), and stores that on your device only, using a local database (SQLite). Nothing is sent to the internet at this stage. Once you create a new family or join one with an invite code, your profile and content start syncing to that family's Supabase project as described in <a href="#how-storage-works">Section 5</a>.</p>
+        <p>If you never connect to a family, or use the in-app "Erase All Data" option before doing so, this locally-stored information is simply erased — we never had a copy of it.</p>
+      </section>
+
+      <section id="how-storage-works">
+        <span class="section-num">05</span>
+        <h2>How your family's data is actually stored</h2>
+        <p>My Home uses a "bring your own backend" model. In practice, that means:</p>
+        <ol>
+          <li>One family member creates a free Supabase project (at <a href="https://supabase.com" target="_blank" rel="noopener">supabase.com</a>) and runs a setup script we provide inside that project.</li>
+          <li>They enter that project's URL and a public API key into the app.</li>
+          <li>Other family members join using an invite code or link, generated from inside that same project.</li>
+          <li>From then on, the app talks directly to that family's own Supabase project — never to a server we operate.</li>
+        </ol>
+        <p>This means your family effectively acts as its own data controller for its Supabase project, and Supabase, Inc. acts as the underlying hosting/processing provider. You can read Supabase's own privacy policy at <a href="https://supabase.com/privacy" target="_blank" rel="noopener">supabase.com/privacy</a>. Access within a family's project is restricted to accounts created with that family's invite code — a stranger cannot join without one.</p>
+      </section>
+
+      <section id="advertising">
+        <span class="section-num">06</span>
+        <h2>Advertising</h2>
+        <p>My Home shows ads by default. You can remove them permanently with a one-time <strong>"Remove Ads"</strong> purchase from inside the app.</p>
+        <p>Ads are served through <strong>Google AdMob</strong>. AdMob may collect device and advertising identifiers and general location (derived from IP address) to serve and measure ads. For users in the EEA, UK, and Switzerland, the app shows Google's consent form (via the User Messaging Platform) when required, so you can choose whether to allow personalized advertising.</p>
+        <p>You can review how Google handles this data at <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a> and manage ad personalization at <a href="https://adssettings.google.com" target="_blank" rel="noopener">adssettings.google.com</a>.</p>
+      </section>
+
+      <section id="purchases">
+        <span class="section-num">07</span>
+        <h2>In-app purchases</h2>
+        <p>The "Remove Ads" purchase is processed entirely through Google Play's billing system. We receive only a confirmation that the purchase succeeded — we never see your payment card or billing details.</p>
+      </section>
+
+      <section id="permissions">
+        <span class="section-num">08</span>
+        <h2>Device permissions the app may ask for</h2>
+        <table>
+          <tr><th>Permission</th><th>Why</th></tr>
+          <tr><td>Notifications</td><td>Calendar reminders, birthday alerts, chat messages, and task assignments</td></tr>
+          <tr><td>Camera / Photos</td><td>Adding a photo to your family album or to a recipe</td></tr>
+          <tr><td>Exact alarms / battery optimization exemption</td><td>Optional — makes scheduled reminders fire more reliably on some Android phones</td></tr>
+          <tr><td>Internet access</td><td>To sync with your family's Supabase project and show ads</td></tr>
+          <tr><td>Camera (QR scanner)</td><td>Scanning an invite code to join a family's shared backend</td></tr>
+        </table>
+      </section>
+
+      <section id="retention">
+        <span class="section-num">09</span>
+        <h2>How long information is kept</h2>
+        <ul>
+          <li><strong>Before connecting to a family:</strong> until you delete it yourself, or uninstall the app.</li>
+          <li><strong>After connecting:</strong> for as long as your family's Supabase project exists and your account within it hasn't been deleted.</li>
+        </ul>
+      </section>
+
+      <section id="deletion">
+        <span class="section-num">10</span>
+        <h2>Deleting your account and data</h2>
+        <p>You're always in control of your own data, and deletion is permanent — there is no way for us to undo it, because we don't hold a backup copy outside your own device or your family's own Supabase project.</p>
+
+        <h3>From inside the app</h3>
+        <p>Go to <strong>Settings</strong> and tap:</p>
+        <ul>
+          <li><strong>"Delete My Account"</strong> (once you've connected to a family) — permanently deletes your account and everything you personally created (your events, chores, messages, photos, recipes, etc.). Content that other family members created, or that was simply assigned to you, stays for the rest of the family — only the link to your account is removed.</li>
+          <li><strong>"Erase All Data"</strong> (before you've connected to a family) — permanently erases everything stored on this device and returns the app to its first-run state.</li>
+        </ul>
+
+        <div class="callout">
+          <p>If your family runs its own Supabase project and hasn't applied the latest setup script yet, account deletion may not work until a family member re-runs it from Settings. The in-app flow will tell you if this happens.</p>
+        </div>
+
+        <h3>If you can't access the app</h3>
+        <div class="callout warning">
+          <p><strong>We cannot delete your data for you.</strong> Each family's data lives in a Supabase project that only that family created and controls. We never receive, see, or store the login credentials or API keys for any family's project — so we have no technical way to open it, read it, or delete anything inside it ourselves, no matter who asks us.</p>
+        </div>
+        <p>If you can't sign in to the app yourself, there are only two ways to remove your account:</p>
+        <ol>
+          <li>Ask the family member who set up your family's Supabase project to delete your account directly from their own Supabase dashboard (<strong>Authentication → Users</strong>) — they're the only one with access to do this.</li>
+          <li>If you still have the app and can sign in, use "Delete My Account" in Settings yourself.</li>
+        </ol>
+        <p>If neither is possible — for example, you've lost contact with the family member who administers that project — we genuinely have no fallback to offer. We don't hold a copy of your data anywhere we could delete it from.</p>
+      </section>
+
+      <section id="children">
+        <span class="section-num">11</span>
+        <h2>Children's privacy</h2>
+        <p>My Home is designed to be managed by an adult family member, who may choose to add information about other family members — including children — such as names and birth dates, to the family tree or calendar. The app is not directed at children, and we don't knowingly collect information directly from children under 13.</p>
+        <p>If you believe a child has created their own account without a parent's involvement, we can't remove it ourselves — we have no access to any family's Supabase project or the accounts inside it (see <a href="#deletion">Section 10</a>). The account must be deleted either by the family member who administers that family's Supabase project (from their own dashboard), or by signing in and using "Delete My Account" directly.</p>
+      </section>
+
+      <section id="security">
+        <span class="section-num">12</span>
+        <h2>Security</h2>
+        <p>Data sent between the app and your family's Supabase project is encrypted in transit (HTTPS/TLS). Access to a family's data is restricted to accounts created through that family's own invite flow, enforced by database-level access rules we configure as part of the setup script. No method of storage or transmission is 100% secure, but we design the app so that a stranger with the app installed cannot read another family's data without that family's invite code.</p>
+      </section>
+
+      <section id="your-rights">
+        <span class="section-num">13</span>
+        <h2>Your rights</h2>
+        <p>Depending on where you live, you may have rights to access, correct, export, or delete your personal information. In this app, you can exercise most of these yourself at any time:</p>
+        <ul>
+          <li><strong>Access &amp; correction:</strong> open any screen in the app — your profile, events, messages, etc. — and edit it directly.</li>
+          <li><strong>Deletion:</strong> use the in-app "Delete My Account" / "Erase All Data" option described in <a href="#deletion">Section 10</a>.</li>
+          <li><strong>Portability:</strong> copy out what you need directly from the app. We can't export or transfer your family's data on your behalf, because we have no access to any family's Supabase project — only the family member who administers it can pull a full export, from their own Supabase dashboard.</li>
+        </ul>
+        <p>Questions about any of this are welcome at <a href="mailto:soft.shark2026@gmail.com">soft.shark2026@gmail.com</a> — but please note we can only answer questions, not act on your family's data ourselves (see <a href="#deletion">Section 10</a>).</p>
+      </section>
+
+      <section id="changes">
+        <span class="section-num">14</span>
+        <h2>Changes to this policy</h2>
+        <p>If we change how the app handles information, we'll update this page and change the "Last updated" date at the top. For meaningful changes, we'll also try to flag it inside the app.</p>
+      </section>
+
+      <section id="contact">
+        <span class="section-num">15</span>
+        <h2>Contact</h2>
+        <p>Questions about this policy: <a href="mailto:soft.shark2026@gmail.com">soft.shark2026@gmail.com</a>. We cannot access, view, export, or delete any family's data ourselves — see <a href="#deletion">Section 10</a> for why, and what to do instead.</p>
+      </section>
+
+    </article>
+
+    <footer>
+      My Home — Privacy Policy. © 2026 Mihael Šarko.
+    </footer>
+  </main>
+</div>
+
+<script>
+  (function () {
+    var sections = Array.prototype.slice.call(document.querySelectorAll('main section[id]'));
+    var desktopList = document.getElementById('toc-list');
+    var mobileList = document.getElementById('mobile-toc-list');
+
+    sections.forEach(function (sec) {
+      var heading = sec.querySelector('h2');
+      if (!heading) return;
+      var label = heading.textContent.trim();
+      var id = sec.id;
+
+      var li1 = document.createElement('li');
+      var a1 = document.createElement('a');
+      a1.href = '#' + id;
+      a1.textContent = label;
+      li1.appendChild(a1);
+      desktopList.appendChild(li1);
+
+      var li2 = document.createElement('li');
+      var a2 = document.createElement('a');
+      a2.href = '#' + id;
+      a2.textContent = label;
+      li2.appendChild(a2);
+      mobileList.appendChild(li2);
+    });
+
+    var mobileDetails = document.querySelector('.mobile-toc details');
+    mobileList.addEventListener('click', function (e) {
+      if (e.target.tagName === 'A' && mobileDetails) mobileDetails.open = false;
+    });
+  })();
+</script>
+
+</body>
+</html>
